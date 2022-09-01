@@ -1,0 +1,157 @@
+\capitulo{TRABALHOS RELACIONADOS}
+\label{sec:trabalhosrel}
+\iniciocapitulo
+
+Neste capítulo serão apresentados trabalhos que se relacionam com o tema abordado. O objetivo foi identificar métodos já existentes para o problema em questão e analisar os seus benefícios comparando-os com a proposta desta pesquisa. Ao final do capítulo será apresentada uma tabela comparando as principais características entre os trabalhos aqui citados com o presente trabalho.
+
+\secao{Mineração de Dados Educacionais para Geração de Alertas em Ambientes Virtuais de Aprendizagem como Apoio à Pratica Docente}
+\label{sec:kampff}
+
+Kampff (\citeyear{kampff2009mineraccao}) tem como principal objetivo propor uma arquitetura para sistemas de alertas em AVA. Essa arquitetura será baseada em informações extraídas por processos de Mineração de Dados, buscando identificar alunos com características e comportamentos que podem levar à evasão ou à reprovação.
+
+Ele apresenta como problema que, a grande quantidade de alunos por turma na Educação a Distância como também as qualificações de professores, principalmente no ensino superior, não possuem preparação adequada para a pratica docente e em muitos casos não possuem formação pedagógica. Outro fator é a falta de experiência em dominar ferramentas que auxiliem a mediação das atividades em EAD. Portanto, tem se tornado cada vez mais difícil gerenciar e acompanhar o desempenho desses alunos sem a utilização de uma ferramenta auxiliar.
+
+Kampff (\citeyear{kampff2009mineraccao}) justifica sua proposta apresentando as seguintes hipóteses:
+\begin{enumerate}
+\item Através da Mineração de Dados Educacionais será possível identificar características e comportamentos dos alunos que podem ser uteis para a pratica docente.
+\item A geração de alertas, tendo como base as informações obtidas no processo de Mineração de Dados, servirá para alertar o corpo docente da instituição sobre possíveis alunos com tendência à evasão ou reprovação, para que medidas preventivas sejam aplicadas.
+\end{enumerate}
+
+De acordo com Kampff (\citeyear{kampff2009mineraccao}), os fatores responsáveis que podem levar o aluno a evadir do curso, ou obter reprovação no mesmo, podem ser divididos em duas categorias: fatores internos a instituição e fatores externos, conforme descritos na Seção \ref{sec:evasao}. Essa categorização será utilizada pelo autor como base de orientação para estudos relacionados aos possíveis fatores e causas para evasão e reprovação na EAD.
+
+Para a etapa de experimentação do seu sistema de alertas, Kampff (\citeyear{kampff2009mineraccao}) utilizou o AVA NetAula utilizado pela Universidade Luterana do Brasil (ULBRA). A base de dados do AVA foi analisada detalhadamente para que fosse possível a seleção dos atributos mais relevantes e dos algoritmos mais adequados para o processo de extração de conhecimento. Ao final do processo de análise, pré-processamento, agrupamento e validação dos dados, foram totalizados 230 atributos para representar cada aluno, porém, apenas 87 destes atributos foram selecionados para a etapa de MD, dos quais os mais relevantes contemplam as seguintes categorias:
+
+\begin{enumerate}
+\item Demográficos: informações pessoais do aluno.
+\item Comportamentais: informações relacionadas ao comportamento do aluno no AVA.
+\item Desempenho: informações sobre entregas e notas das tarefas.
+\item Desempenho final: relação do aluno com o resultado final de cada curso.
+\end{enumerate}
+
+Para a etapa de MD, Kampff (\citeyear{kampff2009mineraccao}) utilizou dois algoritmos (\textit{DecisionTree} e o \textit{RuleLearner}) já descritos na Seção \ref{sec:mineracao}, e a ferramenta RapidMiner, já descrita na Seção \ref{sec:extracao}.
+O sistema de alertas desenvolvido por Kampff (\citeyear{kampff2009mineraccao}) funciona através de geração de alertas definidos pelo professor (alertas fixos), e por alertas derivados da etapa de MD (alertas baseados em padrões).
+
+Para validação dos dados obtidos, Kampff (\citeyear{kampff2009mineraccao}) aplicou testes de hipóteses baseados nos percentuais de aprovação, evasão e reprovação dos alunos acompanhados, tendo como base comparativa os dados históricos dos alunos que não foram acompanhados pelo sistema de alertas. Pretende-se neste trabalho avaliar o desempenho do sistema nos dados históricos da UAB/UECE, verificando-se a existência ou não de tendência a evasão em alunos que já cursaram a UAB/UECE em algum momento no passado.
+
+Através desses dados históricos, foi possível montar um modelo preditivo de classificação, que por sua vez, irá classificar novos alunos de acordo com seus respectivos dados históricos.
+
+Apesar das semelhanças e das influencias, este trabalho se diferencia em alguns pontos com o trabalho apresentado por Kampff (\citeyear{kampff2009mineraccao}). O presente trabalho não teve como finalidade desenvolver um sistema de alertas, mas se beneficiou das métricas utilizadas por Kampff (\citeyear{kampff2009mineraccao}) para a criação do seu modelo preditivo.
+
+\secao{Uma Abordagem Genérica de Identificação Precoce de Estudantes com Risco de Evasão em um AVA utilizando Técnicas de Mineração de Dados}
+\label{ref:santos}
+
+O trabalho descrito em Cavalcanti (\citeyear{cavalcantimineraccao}), tem como principal objetivo o
+desenvolvimento de uma abordagem genérica de identificação de tendência à evasão em cursos a distância que fazem uso de Ambientes Virtuais de Aprendizagem, aplicando técnicas de Mineração de Dados.
+
+Em Cavalcanti (\citeyear{cavalcantimineraccao}) é apresentada uma abordagem genérica para a identificação precoce de alunos que possam ter perfis que os levem a evasão, isso se torna possível através da utilização técnicas de Mineração de Dados. O foco de sua pesquisa não é somente uma única disciplina em um único período de tempo, mas sim a identificação de perfis de alunos nos mais diversos contextos de um AVA, abrangendo todos os cursos e em todos os períodos letivos.
+
+Cavalcanti (\citeyear{cavalcantimineraccao}) focou-se apenas em dados variantes no tempo para sua escolha. Ele justifica isto pelo fato de que dados variantes no tempo podem ser obtidos através do monitoramento dos alunos que utilizam um AVA. Estes dados não necessitam da elaboração de questionários para que sejam obtidos, tornando menos trabalhosa a etapa de pré-processamento e transformação dos dados, como também, é através desse tipo de dado que é possível prover modelos genéricos para o processo preditivo, pelo fato de serem dados comuns a todas as instituições de ensino. Os atributos selecionados foram as notas dos alunos no decorrer do período letivo.
+
+Cavalcanti (\citeyear{cavalcantimineraccao}) dividiu seu método em dois contextos, um utilizando uma abordagem genérica a partir de dados de um AVA, e a outra foi uma abordagem genérica a partir de um SCA (Sistema de Controle Acadêmico).
+
+O AVA escolhido foi o \textit{Moodle}, que é o AVA definido para o presente trabalho, os dados necessários para o processo de KDD foram obtidos através de consultas as tabelas mdl\_user, mdl\_log e mdl\_grades, das quais foram extraídas as notas parciais dos estudantes agrupadas por atividades. Cavalcanti (2014) relata que através de algoritmos de classificação, aplicados nas notas das atividades iniciais, é possível prever se um aluno será aprovado ou reprovado na disciplina. Por sua vez, a partir da utilização dos dados classificados de todas as disciplinas no respectivo curso, é possível prever a evasão do aluno no curso de graduação. Para essa abordagem foi utilizado o algoritmo de Árvore de Decisão \textit{48} já descrito na Seção \ref{sec:mineracao}.
+
+Para a experimentação do segundo modelo, os dados utilizados foram obtidos do SCA da UFPB Virtual (Unidade de Educação a Distância da Universidade Federal da Paraíba), que integra o sistema de Universidade Aberta do Brasil (UAB). Ele dividiu a sua base de dados em duas classes distintas, alunos graduados e alunos evadidos.
+
+Para os testes realizados com o método de predição desenvolvido por Cavalcanti (\citeyear{cavalcantimineraccao}), foram utilizados os seguintes algoritmos: \textit{SimpleCart}, \textit{J48} e o \textit{ADTree}, que são algoritmos já descritos na Seção \ref{sec:mineracao}.
+
+Para validação do método preditivo desenvolvido, eles utilizam o método de Acurácia Geral, que é utilizado para medir a proporção total dos estudantes com situação final, evadido ou graduado, que foi previsto pelas técnicas utilizadas. O critério é simples, é baseado na quantidade de alunos corretamente classificados na classe de graduados, com a quantidade de alunos corretamente classificados na classe de evadidos, divido pela quantidade total de alunos.
+
+As técnicas utilizadas para a seleção dos atributos mais relevantes, como também os algoritmos de predição, e os métodos para avaliar a precisão dos resultados óbitos, influenciaram o presente trabalho. Porém, diferente de Cavalcanti (\citeyear{cavalcantimineraccao}), o presente trabalho encapsulou todo o processo de mineração, predição e acompanhamento do aluno em Agentes desenvolvidos em \textit{JADE}.
+
+\secao{Minerando Dados Educacionais com foco na Evasão Escolar: oportunidades, desafios e necessidades}
+\label{ref:rigo}
+
+O trabalho desenvolvido por Rigo (\citeyear{rigo2012minerando}), tem como principal objetivo justificar com base em seus estudos, a necessidade de uma ampliação no processo de análise inicial em relação aos fatores monitorados e que são utilizados na MDE, como também a inclusão de aspectos relacionados ao corpo docente e nas respectivas metodologias atribuídas a cada situação. De acordo com essa abordagem, a utilização e o desenvolvimento de soluções capazes de identificar precocemente perfis de alunos que possam evadir, é justificada, tendo como finalidade o apoio à pratica docente proporcionando um melhor acompanhamento dos discentes. Esse objetivo justifica e complementa o porquê que se faz necessária a utilização de soluções dinâmicas e inteligentes para o controle da evasão escolar apresentados no presente trabalho.
+
+Rigo (\citeyear{rigo2012minerando}) destaca em sua abordagem que os principais fatores para a evasão escolar são relacionados à aspectos pessoais e sociais existentes antes do ingresso no curso, como também os relacionados com o contato acadêmico, as metodologias de aprendizagem utilizadas e a integração institucional.
+
+Para a identificar variáveis associadas com o comportamento de evasão, faz-se necessária a utilização da MD, e como o presente trabalho, este também através da MD será possível a geração de modelos que promovam ações de diagnóstico precoce e encaminhamento de ações preventivas \cite{rigo2012minerando}.
+
+O sistema proposto por Rigo (\citeyear{rigo2012minerando}) promove uma implementação que segue as seguintes etapas de processos: descoberta de conhecimento, registro de padrões de interesse, identificação de tendências conforme os padrões descobertos, aviso aos envolvidos, registros das ações realizadas e resultados obtidos. Essa abordagem foi utilizada em um estudo de caso que envolveu cursos de graduação, e utilizou um AVA como fonte de dados para a detecção de perfis com tendência a evasão. Para o estudo de caso, foram utilizados algoritmos de redes neurais. Para trabalhos futuros foi definida a análise de utilização de informações linguísticas em consonância com recursos de mineração, tendo como objetivo aproveitar melhor os dados não textuais disponíveis no AVA, assim permitindo aumentar as possibilidades de reconhecimento e comunicação de padrões significativos para o apoio a pratica docente.
+
+O presente trabalho não utilizou algoritmos de redes neurais nos processos de KDD, porém tomou como influencia as justificativas apresentadas por Rigo (\citeyear{rigo2012minerando}) para justificar o uso da MDE em prol do auxilio do acompanhamento educacional dos alunos, tendo como finalidade influencia-los a se dedicarem e recuperarem determinadas deficiências em seus estudos.
+
+\secao{Minerando Dados sobre o desempenho de alunos de cursos de educação permanente em modalidade EAD: Um estudo de caso sobre evasão escolar na UNA-SUS}
+\label{ref:costa}
+
+Da Costa (\citeyear{da2012minerando}) demonstra em sua pesquisa que através da utilização de Extração de Conhecimento em Base de Dados foi possível identificar padrões que correspondem a evasão em cursos na modalidade EAD para profissionais da saúde. Os dados foram fornecidos pela UFCSPA (Universidade Federal de Ciências da Saúde de Porto Alegre) correspondentes a cursos de especialização na área da saúde.
+
+Para a etapa de MD, Da Costa (\citeyear{da2012minerando}) utilizou dados contidos em extensas planilhas, que continham o nome, a sede, o tutor, notas presenciais, notas EAD, notas de recuperação, informações de acesso ao AVA e informações sobre o desempenho dos alunos. Após a etapa de seleção e pré-processamento dos dados, apenas as notas das avaliações finais e informações referente ao status do aluno foram utilizadas. A base de dados continha informações de 249 alunos da turma de 2013 da pós graduação \textit{lato sensu}, que foram disponibilizados pela coordenação do curso.
+
+Da Costa (\citeyear{da2012minerando}) para a etapa de MD utilizou como ferramenta o \textit{Weka}. O algoritmo utilizado foi o \textit{J48} de árvore de decisão, que teve uma acurácia de 97,6\% para o problema proposto.
+Para validação dos dados foi utilizado o técnica \textit{cross-validation} utilizando o método \textit{k-fold}, já descrita na Seção \ref{sec:mineracao}, que assumiu o valor de 10 \textit{folds}.
+
+Apesar de Da Costa (\citeyear{da2012minerando}) não utilizar Sistemas Multiagentes para o acompanhamento do comportamento escolar dos alunos, às técnicas utilizadas para identificar as regras para classificação, o algoritmo utilizado e a forma como validou o seu modelo de dados, foram de grande influência para o presente trabalho. No caso do presente trabalho, utilizou o algoritmo \textit{J48} apenas para que fosse possível visualizar as possíveis regras utilizadas para classificação, mas o algoritmo que foi utilizado para realizar a classificação dos novos dados históricos dos alunos foi o \textit{Random Forest}.
+
+\secao{Sistemas Multiagentes: mapeando a evasão na educação a distância}
+\label{ref:wilges}
+
+Wilges (\citeyear{wilges2010sistemas}) em seu trabalho, propõe um modelo conceitual preditivo de evasão na modalidade de EAD, que é construído seguindo uma arquitetura para Sistemas Multiagentes. Através dessa abordagem, espera-se que o problema da grande quantidade de alunos com risco a evasão seja bem identificado e visualizado, promovendo possíveis técnicas para ações preventivas.
+
+Wilges (\citeyear{wilges2010sistemas}) justifica sua abordagem com a utilização de uma comunidade de agentes adaptável às estratégias definidas no contexto. O SMA proposto estará em constante aprendizagem para se adequar aos mais diversos contextos.
+
+Para o desenvolvimento do SMA foi utilizado o \textit{framework} \textit{JADE} tendo como base as especificações FIPA para a comunicação entre os agentes, semelhante ao trabalho proposto
+nesta monografia.
+
+Para facilitar identificação dos agentes necessários para o desenvolvimento do SMA, Wilges (\citeyear{wilges2010sistemas}) utilizou a ferramenta \textit{AgentTool}, já descrita na Seção \ref{sec:multiagentes}. Nela foi utilizada a técnica de especificação de casos de uso, que também podem ser expressados por diagramas de sequência, para especificar a troca de mensagens entre os papéis no modelo de SMA descrito, ambas técnicas de modelagem já descritas na Seção \ref{sec:multiagentes}. Primeiro foi definido o papel do sistema e logo em seguida foram definidos os passos necessários para que esse papel seja cumprido.
+
+De acordo com Wilges (\citeyear{wilges2010sistemas}), os papeis definidos e os respectivos agentes foram:
+
+\begin{enumerate}
+\item Papéis:
+\begin{itemize}
+\item Controlar Evasão
+\item Observar Perfil do Estudante no AVA
+\item Gerar Informações para a Instituição
+\end{itemize}
+\item Agentes:
+\begin{itemize}
+\item Agente de Controle de Sessão
+\item Agente de Desempenho
+\item Agente de Participação
+\item Agente de Frequência
+\item Agente de Monitoramento
+\item Agente de Informação
+\end{itemize}
+\end{enumerate}
+
+Cada agente foi baseado nas características gerais dos AVA’s utilizados atualmente. O agente mais importante é o Agente de Monitoramento que é o responsável por identificar riscos de evasão de acordo com as informações passadas pelos demais agentes comunicar o Agente de Informação, que é responsável por avisar o corpo docente \cite{wilges2010sistemas}. Para a presente pesquisa, essa arquitetura conceitual será muito importante para influenciar no desenvolvimento da arquitetura do modulo proposto, em como os agentes podem ser divididos e seus respectivos compromissos.
+
+\secao{Sistema Tutor Inteligente baseado em Agentes na plataforma MOODLE para Apoio as Atividades Pedagógicas da Universidade Aberta do Piauí}
+\label{sec:silva}
+
+O trabalho de Silva, Machado e Araújo (\citeyear{silva2014sistema}) teve como finalidade o desenvolvimento de um Sistema Tutor Inteligente para a plataforma \textit{Moodle}, com o objetivo de auxiliar nas atividades pedagógicas da Universidade Aberta do Piauí (UAPI).
+
+A implementação foi feita utilizando Agentes Inteligentes desenvolvidos na plataforma \textit{JADE}. O agentes desenvolvidos foram:
+
+\begin{enumerate}
+\item Agentes de Perfil: Será responsável por captar o perfil do aluno, identificando suas deficiências e necessidades;
+\item Agente de desempenho: Proporciona condições de decisão de que tarefa ou ação a ser executada;
+\item Agente Comunicador: Servirá de elo entre processo do STI e o tutor, colocando este a par das atividades exercidas pelos alunos e sugerindo intervenções pedagógicas.
+\end{enumerate}
+
+Para a descoberta de padrões nos dados obtidos através das interações dos usuários no \textit{Moodle} foi utilizado o algoritmo \textit{k-means}, que é um algoritmo de agrupamento/clusterização, através dele foi possível dividir os alunos em grupos (\textit{clusters}), tornando possível a recomendação de atividades pedagógicas para cada perfil. O algoritmo \textit{k-means} utiliza um parâmetro de entrada $k$, que determina a quantidade de \textit{clusters} (coleção de objetos que são similares uns aos outros (de acordo com algum critério de similaridade pré definido) e dissimilares a objetos pertencentes a outros \textit{clusters}), sendo que tais \textit{clusters} possuem n elementos (os \textit{clusters} podem ter quantidade de elementos diferentes). Para que fosse possível classificar as novas instancias dos dados dos usuários em seus respectivos grupos, foi utilizado o algoritmo \textit{J48}, já descrito na Seção \ref{sec:mineracao}. Ambos os algoritmos foram utilizados através da ferramenta para mineração de dados \textit{Weka}.
+
+O presente trabalho assemelha-se bastante com o de Silva, Machado e Araújo (\citeyear{silva2014sistema}), a maior diferença é no algoritmo escolhido para a classificação das novas instancias dos dados dos alunos, que é o \textit{Random Forest}, ele demonstrou ser mais eficiente tendo uma maior acurácia de acordo com o modelo de dados desenvolvido no presente trabalho, que será descrito no capitulo \ref{sec:metodologia}. Outra diferença é na arquitetura multiagente definida para o presente trabalho, que também será descrita no capitulo \ref{sec:metodologia}. Apesar das diferenças o presente trabalho se influencia da abordagem de Silva, Machado e Araújo (\citeyear{silva2014sistema}) para a descoberta das classes que servirão para classificar os alunos. O presente trabalho também utilizou o algoritmo \textit{k-means} e separou os dados em 5 \textit{clusters} (MUITO RUIM, RUIM, REGULAR, BOM e MUITO BOM).
+
+A Tabela \ref{tab:trabalhosrelacionados} apresenta um comparativo entre as características dos trabalhos relacionados e o presente trabalho.
+
+\begin{table}[h]
+\centering
+\caption{Comparativo das Características dos Principais Trabalhos Relacionados}
+\vspace{0.5cm}
+\begin{tabular}{l|r|r|r|r|r}
+ 
+Trabalho & Moodle & Multiagente & Aprendizagem & Técnica\\
+\hline
+\cite{kampff2009mineraccao} & & & Supervisionada & Classificação\\
+\cite{cavalcantimineraccao} & & X & Supervisionada & Classificação\\
+\cite{rigo2012minerando} & & & Não Supervisionada & Redes Neurais\\
+\cite{da2012minerando} & X & & Supervisionada & Classificação\\
+\cite{wilges2010sistemas} & & X & Não se Aplica & Não se Aplica\\
+\cite{silva2014sistema} & X & X & Não Supervisionada & Clusterização\\
+\textbf{Este Trabalho}  & X & X & Não Supervisionada & Clusterização
+\end{tabular}
+\label{tab:trabalhosrelacionados}
+\end{table}
